@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<title>Task List</title>
+</head>
+<body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Task-Navbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>                        
+	      </button>
+	      <a class="navbar-brand" href="#">Task List</a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="Task-Navbar">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="./index.html">Home</a></li>
+	        <li><a href="./tasks_description.html">Tasks Description</a></li>
+	        <li><a href="about.html">About</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<!-- End Navbar -->
+
+	<!-- Web content -->
+	<div class="container">
+		<h1>Here are the Tasks</h1>
+		<ol class="breadcrumb">
+		  <li><a href="./index.html">Home</a></li>
+		</ol>
+		
+		<div class="row">
+			<div class="col-md-7 table-responsive">          
+			  <table class="table table-hover table-bordered">
+			    <thead>
+			      <tr>
+			        <th>#</th>
+			        <th>Task</th>
+			        <th>User</th>
+			        <th>Is Finished(finished:V, unfinished:X)</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td>1</td>
+			        <td><a href="./tasks_description.html#task1">Homework-Responsive Web Dsign</a></td>
+			        <td>Ray</td>
+			        <td>V</td>
+			      </tr>
+			      <tr>
+			        <td>2</td>
+			        <td><a href="./tasks_description.html#task2">Mountain Climbing</a></td>
+			        <td>Tom</td>
+			        <td>V</td>
+			      </tr>
+			      <tr>
+			        <td>3</td>
+			        <td><a href="./tasks_description.html#task3">Play Music</a></td>
+			        <td>Bob</td>
+			        <td>V</td>
+			      </tr>
+			    </tbody>
+			  </table>
+			</div>
+		</div>		
+	</div>
+	<!-- End Web content -->
+
+</body>
+</html>
