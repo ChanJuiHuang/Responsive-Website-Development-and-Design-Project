@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- JS library -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/handlebars-v4.0.5.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- My JS -->
+	<script src="AnimalsData.js"></script>
+	<script src="animal_introduction.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+
+	<!-- Encoding -->
+	<meta charset="UTF-8"> 
+
+	<title>Animal Album</title>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>Animal Album</h1>
+		</div>
+		<!-- Nav -->
+		<ul class="nav nav-tabs">
+		  <li id="home" role="presentation"><a href="./index.html">Home</a></li>
+		  <li id="animal_introduction" role="presentation" class="active"><a href="./animal_introduction.html">Animal Introduction</a></li>
+		  <li id="all_photos" role="presentation"><a href="./all_photos.html">All Photos</a></li>	
+		<!-- End Nav -->	
+	</div>
+	<!-- End Nav -->
+
+	<!-- Page content -->
+	<div class="container content-size">
+		<ol class="breadcrumb">
+		  <li><a href="./index.html">Home</a></li>
+		  <li><a href="./animal_introduction.html">Animal Introduction</a></li>
+		</ol>
+		<div id="introduction-content"></div>
+	</div>
+	<!-- End Page content -->
+
+	<!-- Introduction-template -->
+	<script type="text/x-handlebars-template" id="introduction-template">
+		{{#each category}}
+		<div class="page-header">
+			<h2>{{name}}</h2>
+		</div>		
+		<div class="row">
+			{{#each animals}}
+			<div class="col-md-3">
+				<div class="thumbnail">
+					<img src="{{image1}}" class="animal-introduction-size">
+					<div class="caption">
+						<h3>{{name}}</h3>
+						<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#description{{@../index}}{{@index}}">Description</button>
+									
+						<p id="description{{@../index}}{{@index}}" class="collapse">{{description}}</p>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+		{{/each}}
+	</script>
+	<!-- End Introduction-template -->
+
+	<!-- Footer -->
+	<footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+        	This is a Animal Album which is projcet of MOOC 2-Responsive Web Design on Coursera.
+        </p>
+        <p>
+        	
+        </p>
+        <address>
+        	If you have any question, please mail for me.
+			<strong>E-mail:</strong>
+			<a href="mailto:#">ray81415@gmail.com</a>
+		</address>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+</body>
+</html>

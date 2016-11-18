@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- JS library -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/handlebars-v4.0.5.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- My JS -->
+	<script src="AnimalsData.js"></script>
+	<script src="index.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+
+	<!-- Encoding -->
+	<meta charset="UTF-8">
+
+	<title>Animal Album</title>
+</head>
+<body>	
+	<div class="container">
+		<div class="page-header">
+			<h1>Animal Album</h1>
+		</div>
+		
+		<!-- Nav -->	
+		<ul class="nav nav-tabs">
+		  <li id="home" role="presentation" class="active"><a href="./index.html">Home</a></li>
+		  <li id ="animal_introduction" role="presentation"><a href="./animal_introduction.html">Animal Introduction</a></li>
+		  <li id ="all_photos" role="presentation"><a href="./all_photos.html">All Photos</a></li>
+		</ul>			
+	</div>
+	<!-- End Nav -->
+
+	<!-- Page content -->
+	<div class="container content-size">
+		<ol class="breadcrumb">
+		  <li><a href="./index.html">Home</a></li>
+		</ol>
+		<!-- Home page introduction -->
+		<section class="jumbotron home-introduction-size">
+	      <div class="container">	        
+	        <p class="lead text-info">
+	        	Welcome To Animal Album.<br>
+	        	In this website, you will see many kinds of animals.<br>
+	        	It's COOL!~Enjoy it^^
+	        </p>	        
+	      </div>
+	    </section>
+	    <!-- End Home page introduction -->
+	    <div id="carousel-content"></div>	    
+	</div>
+	<!-- End Page content -->
+
+	<!-- Carousel-template -->
+	<script type="text/x-handlebars-template" id="carousel-template">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		    <li data-target="#myCarousel" data-slide-to="1"></li>
+		    <li data-target="#myCarousel" data-slide-to="2"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+		  	{{#each category}}
+		    <div class="item {{#if @first}}active{{/if}}">
+		      {{#each animals}}
+			      {{#if @first}}
+			      <img src="{{image2}}" class="slide-size">			      		      	
+		      	  <div class="carousel-caption">
+		          	<h3>{{name}}</h3>
+		          </div>
+		      	{{/if}}
+		      {{/each}}
+		    </div>
+		    {{/each}}
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+	</script>
+	<!-- End Carousel-template -->
+
+	<!-- Footer -->
+	<footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+        	This is a Animal Album which is projcet of MOOC 2-Responsive Web Design on Coursera.
+        </p>
+        <p>
+        	
+        </p>
+        <address>
+        	If you have any question, please mail for me.
+			<strong>E-mail:</strong>
+			<a href="mailto:#">ray81415@gmail.com</a>
+		</address>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- JS library -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/handlebars-v4.0.5.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- My JS -->
+	<script src="AnimalsData.js"></script>
+	<script src="all_photos.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+
+	<!-- Encoding -->
+	<meta charset="UTF-8"> 
+	
+	<title>Animal Album</title>
+</head>
+<body>	
+	<div class="container">
+		<div class="page-header">
+			<h1>Animal Album</h1>
+		</div>
+		<!-- Nav -->
+		<ul class="nav nav-tabs">
+		  <li id="home" role="presentation"><a href="./index.html">Home</a></li>
+		  <li id="animal_introduction" role="presentation"><a href="./animal_introduction.html">Animal Introduction</a></li>
+		  <li id="all_photos" role="presentation" class="active"><a href="./all_photos.html">All Photos</a></li>
+		</ul>		
+		<!-- End Nav -->	
+	</div>
+
+	<!-- Page content -->
+	<div class="container content-size">
+		<ol class="breadcrumb">
+		  <li><a href="./index.html">Home</a></li>
+		  <li><a href="./all_photos.html">All Photos</a></li>
+		</ol>
+		<div id="photo-content"></div>
+	</div>
+	<!-- End Page content -->
+
+	<!-- Photo-template -->
+	<script type="text/x-handlebars-template" id="photo-template">
+		{{#each category}}
+		<div class="page-header">
+			<h2>{{name}}</h2>			
+			<div class="row">
+				{{#each animals}}
+				<div class="col-md-12">
+					<h3>{{name}}</h3>
+				</div>
+
+				<div class="col-md-5">				
+					<img src="{{image1}}" class="img-thumbnail photo-size">
+				</div>
+
+				<div class="col-md-5">
+					<img src="{{image2}}" class="img-thumbnail photo-size">	
+				</div>
+				{{/each}}
+			</div>
+			<br>			
+		</div>
+		{{/each}}
+	</script>
+	<!-- End Photo-template -->
+
+	<!-- Modal-template -->
+	<script id="modal-template" type="text/x-handlebars-template">
+      <div id="imageModal" class="modal fade" role="dialog">
+        <div class="modal-dialog"  style="width:800">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img style="width:100%" src="{{src}}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <!-- End Modal-template -->
+
+	<!-- Footer -->
+	<footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+        	This is a Animal Album which is projcet of MOOC 2-Responsive Web Design on Coursera.
+        </p>
+        <p>
+        	
+        </p>
+        <address>
+        	If you have any question, please mail for me.
+			<strong>E-mail:</strong>
+			<a href="mailto:#">ray81415@gmail.com</a>
+		</address>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+</body>
+</html>

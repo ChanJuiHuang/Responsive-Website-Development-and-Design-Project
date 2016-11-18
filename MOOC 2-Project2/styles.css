@@ -1,0 +1,35 @@
+.content-size {
+  min-height: 70rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/*Using in index.html*/
+.float-right {
+	float: right;
+}
+
+.home-introduction-size {
+  height: 15rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.slide-size{
+	min-height: 450px;
+	min-width: 450px;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+/*Using in animal_introduction.html*/
+.animal-introduction-size{
+	max-height: 150px;		
+	padding-top: 12px;
+	padding-bottom: 10px;
+}
+
+/*Using in all_photos.html*/
+.photo-size{
+	max-height: 200px;
+}
