@@ -22,4 +22,4 @@ Implement a search function that allows the user to search within the listed sit
 
 
 Challenge 3: Website recommender (unfinish)  
-Can you recommend websites to users based on things they have up voted and commented on? E.g. if I up vote a site entitled ．Tofu recipes・, it would recommend other sites with ．tofu・ and ．recipe・ in their titles or descriptions. 
+Can you recommend websites to users based on things they have up voted and commented on? E.g. if I up vote a site entitled "Tofu recipes", it would recommend other sites with "tofu" and "recipe" in their titles or descriptions. 
