@@ -1,0 +1,26 @@
+<template name="website_detail">
+	<div class="container">
+		<!-- breadcrumb -->
+	    <ol class="breadcrumb">
+	      <li class="js-reset-session"><a href="/">Home</a></li>
+	      <li class="js-reset-session"><a href="/website_detail">Website Detail</a></li>
+	    </ol>
+
+	    <!-- introduction -->
+	    <div class="well">
+	      <h3>
+	      In this page, you will easy to see the rank of website. <br>      
+	      </h3>
+	      <h4>
+	        <strong><em>Then you can enter every item to see the detail of website!</em></strong><br>	        
+	      </h4>
+	    </div>
+
+	    <!-- detail list -->
+		<div class="list-group">
+		{{#each websites}}
+		  <a href="/website_detail/{{_id}}" class="list-group-item">No {{rank}}. {{title}}</a>
+		{{/each}}
+		</div>
+	</div>
+</template>

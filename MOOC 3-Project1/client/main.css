@@ -1,0 +1,9 @@
+/*use in [template name="website_form"] [id="website_form"]*/
+.hidden_div{
+	display:none;
+}
+
+/*footer*/
+.float-right {
+	float: right;
+}
