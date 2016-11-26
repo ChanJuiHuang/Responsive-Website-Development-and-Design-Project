@@ -57,6 +57,8 @@ Template.registerHelper('incremented', function(index){
 		let rank = (++index);
 		Websites.update({_id: this._id}, {$set: {rank: rank}});
 		return rank;
+	}else{
+		return this.rank;
 	}	
 });
 
