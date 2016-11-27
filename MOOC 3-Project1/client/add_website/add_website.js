@@ -14,21 +14,14 @@ Template.add_website.events({
 					console.log(error);
 				}else{					
 					try{
-						// get title
-						let title_pattern = /<title>.*<\/title>/ig; 					
+						// get title						
 						let title = result.content.match(/<title>.*<\/title>/ig)[0];
-						title = title.replace('<title>','');
-						title = title.replace('</title>','');
+						title = title.replace(/(<([^>]+)>)/ig,'');						
 						$('#title').val(title);						
 
-						// get description
-						let description_pattern = /description.*content=.*/ig; 
-						let description = result.content.match(description_pattern)[0];						
-						let index1 = description.search(/=.*"/g);
-						let index2 = description.search(/[\'\"].{0,5}>/g);
-						description = description.slice(index1,index2);
-						description = description.replace('=','');
-						description = description.replace('"','');						
+						// get description						
+						let description = result.content.match(/<.*meta.*description.*content=.*>/ig)[0];						
+						description = description.replace(/(.*content.*=.{0,5}"|".*>$)/ig,'');					
 						$('#description').val(description);				
 					}catch(err){						
 						console.log(err);						
