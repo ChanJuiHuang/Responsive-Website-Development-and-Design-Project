@@ -1,0 +1,39 @@
+<!-- Detail page for single website -->
+
+<template name="detail_page">
+	<div class="container">
+		<!-- breadcrumb -->
+	    <ol class="breadcrumb">
+	      <li><a href="/">Home</a></li>
+	      <li><a href="/website_detail">Website Detail</a></li>
+	      <li><a href="/website_detail/{{_id}}">{{title}}</a></li>
+	    </ol>
+
+		<!-- single website item -->
+		<div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4>
+	        <a href="/website_list" title="Go back website list">No {{rank}}. {{title}}</a>    
+	      </h4>      
+	    </div>
+	   {{> website_item}}   
+	  </div>
+
+	  <!-- comment box -->
+	  <div class="panel panel-info">
+	    <div class="panel-heading">
+	      <h4>
+	        Comment
+	      </h4>      
+	    </div>
+
+	    <div class="panel-body">	      
+	      	<textarea class="form-control" rows="5" id="comment"></textarea>
+	    </div>
+
+	    <div class="panel-footer"> 
+	    	<button class="btn btn-success" id="comment-submit">Submit</button>
+	    </div>   
+	  </div>
+	</div>
+</template>
