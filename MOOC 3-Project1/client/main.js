@@ -20,7 +20,7 @@ Template.body.events({
 Template.navbar.events({
 	'submit #search-form': function(event){
 		Router.go('/website_detail');
-		Session.setPersistent("search-title", event.target.search_title.value);		
+		Session.set("search-title", event.target.search_title.value);		
 		$('#search_title').val("");
 		event.preventDefault();
 	}
