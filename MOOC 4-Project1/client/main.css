@@ -1,0 +1,40 @@
+/* CSS declarations go here */
+
+/*use in [user_list.html]*/
+.user_avatar{
+	min-height: 100px;
+	text-align: center;
+
+}
+
+.avatar_img{
+	height: 75px;
+}
+
+/*use in [chat_page.html]*/
+.msg-box-size{
+	height: 200px;
+	overflow: auto;
+}
+
+.avatar-border-size{
+	height: 200px;
+}
+
+.avatar-chatting-size{
+	display: block;
+	margin: auto;
+}
+
+.icon-margin{
+	margin-right: -45px;
+}
+
+.icon-size{
+	width: 50px;
+}
+
+.msgbox-size{
+	width: 215px;
+	height: 30px;
+}

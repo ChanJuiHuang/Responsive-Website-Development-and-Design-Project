@@ -1,0 +1,45 @@
+<!-- Top level template for the chat page -->
+<template name="chat_page">
+    <h2>Type in the box below to send a message!</h2>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="well well-lg msg-box-size">
+            {{#each messages}}
+                {{> chat_message}}
+            {{/each}}            
+            </div>  
+        </div>
+        <div class="col-md-3 avatar-border-size">
+            <div class="well well-lg avatar-border-size">
+                <img src="/{{otherUserAvatar}}" class="avatar-chatting-size img-thumbnail">                
+            </div>  
+        </div>
+    </div>
+    <div class="row">
+        {{#each iterator}}
+        <div class="col-md-1 icon-margin js-click-icon">
+            <a href="#">
+                <img src="/icon{{index}}.png" class="icon-size img-thumbnail">
+            </a>            
+        </div>
+        {{/each}}
+    </div>
+    <div class="row">        
+        <div class="col-md-12">
+            <form class="js-send-chat">
+                <input class="input msgbox-size" type="text" name="chat" placeholder="type a message here...">
+                <button class="btn btn-default">Send</button>
+            </form>
+        </div>
+    </div>
+</template>
+
+<!-- simple template that displays a message -->
+<template name="chat_message">
+    {{#if isIcon}}
+        someone said: <br>
+        <img src="{{content}}"><br><br>
+    {{else}}
+        someone said: {{content}}<br><br>
+    {{/if}}
+</template>
