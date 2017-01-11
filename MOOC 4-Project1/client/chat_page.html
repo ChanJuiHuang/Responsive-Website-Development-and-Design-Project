@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-3 avatar-border-size">
             <div class="well well-lg avatar-border-size">
-                <img src="/{{otherUserAvatar}}" class="avatar-chatting-size img-thumbnail">                
+                <img src="/{{otherUserAvatar}}" class="avatar-chatting-size img-thumbnail"> 
             </div>  
         </div>
     </div>
@@ -37,9 +37,9 @@
 <!-- simple template that displays a message -->
 <template name="chat_message">
     {{#if isIcon}}
-        someone said: <br>
-        <img src="{{content}}"><br><br>
+        <img src="/{{avatar}}" class="msg-size">:
+        <img src="{{content}}" class="msg-size"><br><br>
     {{else}}
-        someone said: {{content}}<br><br>
+        <img src="/{{avatar}}" class="msg-size">: {{content}}<br><br>
     {{/if}}
 </template>

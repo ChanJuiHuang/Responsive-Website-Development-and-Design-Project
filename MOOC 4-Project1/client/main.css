@@ -19,11 +19,16 @@
 
 .avatar-border-size{
 	height: 200px;
+	margin: auto;
 }
 
 .avatar-chatting-size{
 	display: block;
 	margin: auto;
+}
+
+.msg-size{
+	height: 25px;
 }
 
 .icon-margin{

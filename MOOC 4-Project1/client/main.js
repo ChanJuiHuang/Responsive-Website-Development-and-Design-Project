@@ -1,6 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
+Meteor.subscribe("users");
 ////////////////////
 // helper functions 
 ////////////////////
@@ -72,7 +73,10 @@ Template.chat_page.events({
             // is a good idea to insert data straight from the form
             // (i.e. the user) into the database?? certainly not. 
             // push adds the message to the end of the array
-            msgs.push({content: event.target.chat.value, isIcon: false});
+            msgs.push({
+                avatar: Meteor.user().profile.avatar,
+                content: event.target.chat.value, 
+                isIcon: false});
             // reset the form
             event.target.chat.value = "";
             // put the messages array onto the chat object
@@ -89,7 +93,10 @@ Template.chat_page.events({
             if (!msgs){// no messages yet, create a new array
                 msgs = [];
             }
-            msgs.push({content: event.target.src, isIcon: true});
+            msgs.push({
+                avatar: Meteor.user().profile.avatar,
+                content: event.target.src, 
+                isIcon: true});
             chat.messages = msgs;
             Meteor.call("update_chat_msg", chat);
         }

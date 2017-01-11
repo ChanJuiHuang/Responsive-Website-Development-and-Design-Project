@@ -1,11 +1,16 @@
 import { Meteor } from 'meteor/meteor';
 
 Meteor.publish("chats", function(){
-    return Chats.find({});
+    if (this.userId){
+        return Chats.find({$or: [
+                    {user1Id: this.userId}, 
+                    {user2Id: this.userId}
+                ]});
+    }    
 });
 
-Meteor.publish(null, function(){
-    return Meteor.users.find({});
+Meteor.publish("users", function(){
+    return Meteor.users.find({}, {field: {_id: 1, profile: 1, emails: 1}});
 });
 
 // start up script that creates some users for testing
