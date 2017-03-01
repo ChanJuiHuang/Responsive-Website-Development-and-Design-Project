@@ -1,11 +1,13 @@
 MOOC 4-Web Application Development with JavaScript and MongoDB  
 
+***If you didn't install meteorJS, you have to go https://www.meteor.com/install to install meteorJS. And then open your command-line to install node-modules.<br>Finally, key in "meteor" in command-line to run the web application.***
+
 The project target that is developing an instant messaging application.  
 
 Work:  
 
 Task 1: Improve the look and feel  
-Adapt the templates and helper functions so that the messaging window displays users¡¦ avatars next to their messages. Feel free to add other enhancements!  
+Adapt the templates and helper functions so that the messaging window displays usersÂ¡Â¦ avatars next to their messages. Feel free to add other enhancements!  
 
 Task 2: Implement data writing security  
 Remove the insecure package from the application and implement a Meteor method to allow the insertion of chat items in the Chats collection. Test that you cannot insert items directly any more.  
