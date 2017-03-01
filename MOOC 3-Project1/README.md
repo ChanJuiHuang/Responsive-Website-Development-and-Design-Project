@@ -1,5 +1,7 @@
 MOOC 3-Introduction to Meteor.js Development
 
+***If you didn't install meteorJS, you have to go https://www.meteor.com/install to install meteorJS. And then open your command-line to install node-modules.<br>Finally, key in "meteor" in command-line to run the web application.***
+
 The project target is Build a social website aggregator.
 
 Work:
@@ -22,4 +24,4 @@ Implement a search function that allows the user to search within the listed sit
 
 
 Challenge 3: Website recommender (unfinish)  
-Can you recommend websites to users based on things they have up voted and commented on? E.g. if I up vote a site entitled ¡¥Tofu recipes¡¦, it would recommend other sites with ¡¥tofu¡¦ and ¡¥recipe¡¦ in their titles or descriptions. 
+Can you recommend websites to users based on things they have up voted and commented on? E.g. if I up vote a site entitled Â¡Â¥Tofu recipesÂ¡Â¦, it would recommend other sites with Â¡Â¥tofuÂ¡Â¦ and Â¡Â¥recipeÂ¡Â¦ in their titles or descriptions. 
